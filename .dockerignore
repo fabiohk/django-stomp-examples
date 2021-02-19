@@ -1,0 +1,10 @@
+# At first, everything is ignored
+*
+
+# Leaving only the needed files and the images
+!examples/*.py
+!manage.py
+!example.ipynb
+!Pipfile.lock
+!Pipfile
+!images/*.png

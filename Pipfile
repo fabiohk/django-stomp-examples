@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django-stomp = "*"
+django = "*"
+django-extensions = "*"
+jupyter = "*"
+ipython = "*"
+
+[dev-packages]
+black = {version = "==20.8b1",extras = ["d"]}
+
+[requires]
+python_version = "3.9"

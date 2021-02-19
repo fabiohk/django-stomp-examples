@@ -1,0 +1,19 @@
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - 15672:15672
+      - 61613:61613
+    volumes:
+      - ./custom-rabbitmq-conf:/etc/rabbitmq/
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file: .env
+    ports:
+      - 8888:8888
+    depends_on:
+      - rabbitmq
+    command: python manage.py shell_plus --notebook
